@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+		<link rel="stylesheet" href="css/jmStyle.css" />
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script type="text/javascript" src="js/lazyload.js" ></script>
+	</head>
+	
+	<body>
+		<!-- hzo-hd头部 start -->
+		<div class="hzo-hd clearfix">
+			<a href="index.html" class="logo l"><img src="images/logo.png" /></a>
+			<ul class="hzo-nav l">
+				<li><a href="">首页</a></li>
+				<li><a href="">案例</a></li>
+				<li><a href="">服务项目</a></li>
+				<li><a href="">动态</a></li>
+				<li><a href="">联系</a></li>
+			</ul>
+			<p class="r hzo-tel">
+				<i></i><span>0571-56570018</span>
+			</p>
+		</div>
+		<!-- hzo-hd头部 end -->
+		
+		<!-- hzo-bnr轮播图 start -->
+		<div class="hzo-bnr">
+			<!-- Swiper -->
+		    <div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide">
+		            	<img src="images/bnr01.png" />
+		            	<div class="bnr-info w1200 clearfix">
+		            		<div class="bnr-info-l l">
+		            			<h5>B2B学院 行业站1</h5>
+		            			<p>五金采致力于打造五金行业采购商与供应商快速匹配，构建一个合伙人撮合的机制，实现最低成本的采购交易</p>
+		            		</div>
+		            		<div class="bnr-info-r l">
+		            			<a href="" class="bnr-info-logo"><img src="images/bnrLogo01.png" /></a>
+		            		</div>
+		            	</div>
+		            </div>
+		            <div class="swiper-slide">
+		            	<img src="images/bnr02.png" />
+		            	<div class="bnr-info w1200 clearfix">
+		            		<div class="bnr-info-l l">
+		            			<h5>B2B学院 行业站2</h5>
+		            			<p>五金采致力于打造五金行业采购商与供应商快速匹配，构建一个合伙人撮合的机制，实现最低成本的采购交易</p>
+		            		</div>
+		            		<div class="bnr-info-r l">
+		            			<a href="" class="bnr-info-logo"><img src="images/bnrLogo01.png" /></a>
+		            		</div>
+		            	</div>
+		            </div>
+		            <div class="swiper-slide">
+		            	<img src="images/bnr03.png" />
+		            	<div class="bnr-info w1200 clearfix">
+		            		<div class="bnr-info-l l">
+		            			<h5>B2B学院 行业站3</h5>
+		            			<p>五金采致力于打造五金行业采购商与供应商快速匹配，构建一个合伙人撮合的机制，实现最低成本的采购交易</p>
+		            		</div>
+		            		<div class="bnr-info-r l">
+		            			<a href="" class="bnr-info-logo"><img src="images/bnrLogo01.png" /></a>
+		            		</div>
+		            	</div>
+		            </div>
+		        </div>
+		        <!-- Add Pagination -->
+		        <div class="swiper-pagination"></div>
+		    </div>
+		</div>
+		<!-- hzo-bnr轮播图 end -->
+	    <script src="js/swiper.min.js"></script>
+	
+	    <!-- Initialize Swiper -->
+	    <script>
+	    var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        paginationClickable: true,
+	        direction: 'vertical',
+	        lazyLoading : true,
+        	mousewheelControl: true
+	    });
+	    </script>
+	    <script>
+	    	$("img.lazy").lazyload();
+	    </script>
+	    
+	    <!-- hzo-business功能 start -->
+	    <div class="hzo-business">
+	    	<div class="w1200">
+	    		<div class="clearfix bus-list">
+	    			<div class="l bus-item">
+		    			<i class="i-business i-bus01"></i>
+		    			<h5>网站建设</h5>
+		    			<p>独一无二的原创设计，从PC、手机、移动终端，多网合一</p>
+		    		</div>
+		    		<div class="l bus-item">
+		    			<i class="i-business i-bus02"></i>
+		    			<h5>APP开发设计</h5>
+		    			<p>资深的研发团队，打造优良的iOS与Android体验产品</p>
+		    		</div>
+		    		<div class="l bus-item">
+		    			<i class="i-business i-bus03"></i>
+		    			<h5>小程序开发</h5>
+		    			<p>兴起的轻量APP产品，开发周期短，维护成本低</p>
+		    		</div>
+		    		<div class="l bus-item">
+		    			<i class="i-business i-bus04"></i>
+		    			<h5>品牌标识</h5>
+		    			<p>优秀的设计团队，打造独一无二的品牌标识</p>
+		    		</div>
+	    		</div>
+	    	</div>
+	    </div>
+	    <!-- hzo-business功能 end -->
+	    
+	    <!-- hzo-case案例 start -->
+	    <div class="hzo-case">
+	    	<div class="w1200">
+	    		<div class="case-hd clearfix">
+	    			<h5 class="l">案例 </h5><h6 class="l">经典品质</h6><p class="l"><span>网站建设</span> / <span>APP</span> / <span>小程序</span> / <span>logo</span></p>
+	    			<a href="" class="case-more"><span>全部作品</span><i></i></a>
+	    		</div>
+	    	</div>
+	    	<div class="case-list clearfix">
+	    		<div class="l care-item">
+	    			<a href="" class="care-pic"><img src="images/case01.png" /></a>
+	    			<p class="care-title"><a href="">五金采 APP采购平台</a></p>
+	    		</div>
+	    		<div class="l care-item">
+	    			<a href="" class="care-pic"><img src="images/case02.png" /></a>
+	    			<p class="care-title"><a href="">链金APP</a></p>
+	    		</div>
+	    		<div class="l care-item">
+	    			<a href="" class="care-pic"><img src="images/case03.png" /></a>
+	    			<p class="care-title"><a href="">五金云官网</a></p>
+	    		</div>
+	    		<div class="l care-item">
+	    			<a href="" class="care-pic"><img src="images/case04.png" /></a>
+	    			<p class="care-title"><a href="">五金网帮助中心</a></p>
+	    		</div>
+	    		<div class="l care-item">
+	    			<a href="" class="care-pic"><img src="images/case05.png" /></a>
+	    			<p class="care-title"><a href="">代运营专题</a></p>
+	    		</div>
+	    		<div class="l care-item">
+	    			<a href="" class="care-pic"><img src="images/case06.png" /></a>
+	    			<p class="care-title"><a href="">五金眼 行业平台</a></p>
+	    		</div>
+	    		<div class="l care-item">
+	    			<a href="" class="care-pic"><img src="images/case07.png" /></a>
+	    			<p class="care-title"><a href="">b2b学院官网</a></p>
+	    		</div>
+	    		<div class="l care-item">
+	    			<a href="" class="care-pic"><img src="images/case08.png" /></a>
+	    			<p class="care-title"><a href="">链金官网</a></p>
+	    		</div>
+	    	</div>
+	    </div>
+	    <!-- hzo-case案例 end -->
+	    
+	    <!-- hzo-secondary新闻和分享 start -->
+	    <div class="hzo-secondary">
+	    	<div class="w1200 clearfix">
+	    		<div class="l share">
+	    			<div class="column-hd clearfix">
+	    				<h5 class="l">分享 </h5><span class="l">/</span><a href="" class="l">更多分享</a>
+	    			</div>
+	    			<div class="share-list clearfix">
+	    				<a class="share-item">
+	    					<h5>自带思维导图的大纲工具，让你的思路更清晰！</h5>
+	    					<p>2017-03-22</p>
+	    					
+	    				</a>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+	    <!-- hzo-secondary新闻和分享 end -->
+	</body>
+</html>
