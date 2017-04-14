@@ -14,9 +14,9 @@
 	<body>
 		<!-- hzo-hd头部 start -->
 		<div class="hzo-hd clearfix">
-			<a href="index.html" class="logo l"><img src="images/logo.png" /></a>
+			<a href="index.html" class="logo l"><!--<img src="images/logo.png" />--></a>
 			<ul class="hzo-nav l">
-				<li><a href="">首页</a></li>
+				<li><a href="" class="cur">首页</a></li>
 				<li><a href="">案例</a></li>
 				<li><a href="">服务项目</a></li>
 				<li><a href="">动态</a></li>
@@ -27,6 +27,21 @@
 			</p>
 		</div>
 		<!-- hzo-hd头部 end -->
+		<script>
+			$(function() {
+				navState();
+				$(window).scroll(function() {
+					navState();
+				});
+			});
+			function navState() {
+				if($(window).scrollTop() > 0) {
+					$(".hzo-hd").addClass("fix");
+				} else {
+					$(".hzo-hd").removeClass("fix");
+				}
+			}
+		</script>
 		
 		<!-- hzo-bnr轮播图 start -->
 		<div class="hzo-bnr">
@@ -173,15 +188,159 @@
 	    				<h5 class="l">分享 </h5><span class="l">/</span><a href="" class="l">更多分享</a>
 	    			</div>
 	    			<div class="share-list clearfix">
-	    				<a class="share-item">
-	    					<h5>自带思维导图的大纲工具，让你的思路更清晰！</h5>
-	    					<p>2017-03-22</p>
-	    					
+	    				<a class="share-item l" href="">
+	    					<h5 class="share-title">自带思维导图的大纲工具，让你的思路更清晰！</h5>
+	    					<p class="share-time">2017-03-22</p>
+	    					<img src="images/share01.png" class="share-pic" />
+	    					<div class="share-info">
+	    						<p>编者按：很早之前看过田中一光《设计的觉醒》和原研哉的《设计中的设计》，开始比较认同于日本对于常用设计的态度士等…</p>
+	    					</div>
+	    					<div class="share-ft">
+	    						<i class="i-enter l"></i><span class="r">查看全部</span>
+	    					</div>
 	    				</a>
+	    				<a class="share-item l" href="">
+	    					<h5 class="share-title">自带思维导图的大纲工具，让你的思路更清晰！</h5>
+	    					<p class="share-time">2017-03-22</p>
+	    					<img src="images/share02.png" class="share-pic" />
+	    					<div class="share-info">
+	    						<p>编者按：很早之前看过田中一光《设计的觉醒》和原研哉的《设计中的设计》，开始比较认同于日本对于常用设计的态度士等…</p>
+	    					</div>
+	    					<div class="share-ft">
+	    						<i class="i-enter l"></i><span class="r">查看全部</span>
+	    					</div>
+	    				</a>
+	    			</div>
+	    		</div>
+	    		<div class="l news">
+	    			<div class="column-hd clearfix">
+	    				<h5 class="l">新闻  </h5><span class="l">/</span><a href="" class="l">更多分享</a>
+	    			</div>
+	    			<div class="news-list">
+	    				<ul class="news-inner">
+	    					<li class="news-item">
+	    						<a href="" class="news-a">
+	    							<h5 class="news-title">【签约】HZO签约链金科技B2B学院平台开发</h5>
+	    							<p class="news-time">2017-03-22</p>
+	    						</a>
+	    					</li>
+	    					<li class="news-item">
+	    						<a href="" class="news-a">
+	    							<h5 class="news-title">【签约】HZO签约链金科技B2B学院平台开发</h5>
+	    							<p class="news-time">2017-03-22</p>
+	    						</a>
+	    					</li>
+	    					<li class="news-item">
+	    						<a href="" class="news-a">
+	    							<h5 class="news-title">【签约】HZO签约链金科技B2B学院平台开发</h5>
+	    							<p class="news-time">2017-03-22</p>
+	    						</a>
+	    					</li>
+	    					<li class="news-item">
+	    						<a href="" class="news-a">
+	    							<h5 class="news-title">【签约】HZO签约链金科技B2B学院平台开发</h5>
+	    							<p class="news-time">2017-03-22</p>
+	    						</a>
+	    					</li>
+	    					<li class="news-item">
+	    						<a href="" class="news-a">
+	    							<h5 class="news-title">【签约】HZO签约链金科技B2B学院平台开发</h5>
+	    							<p class="news-time">2017-03-22</p>
+	    						</a>
+	    					</li>
+	    					<li class="news-item">
+	    						<a href="" class="news-a">
+	    							<h5 class="news-title">【签约】HZO签约链金科技B2B学院平台开发</h5>
+	    							<p class="news-time">2017-03-22</p>
+	    						</a>
+	    					</li>
+	    				</ul>
+	    				<div class="mask"></div>
 	    			</div>
 	    		</div>
 	    	</div>
 	    </div>
+	    <script>
+	    	$(function() {
+				var scrollTimer = null;
+				var delay = 2000;
+				//1.鼠标对新闻触发mouseout事件后每2s调用scrollNews() 
+				//2.鼠标对新闻触发mouseover事件后停止调用scrollNews() 
+				//3.初次加载页面触发鼠标对新闻的mouseout事件 
+				$('div.news-list').hover(function() {
+					clearInterval(scrollTimer);
+				}, function() {
+					scrollTimer = setInterval(function() {
+						scrollNews();
+					}, delay);
+				}).triggerHandler('mouseout');
+			});
+			//滚动新闻 
+			function scrollNews() {
+				var $news = $('div.news-list>ul');
+				var $lineHeight = $news.find('li:first').height();
+				$news.animate({ 'marginTop': -$lineHeight + 'px' }, 600, function() {
+					$news.css({ margin: 0 }).find('li:first').appendTo($news);
+				});
+			}
+	    </script>
 	    <!-- hzo-secondary新闻和分享 end -->
+	    
+	    <!-- hzo-cooperation合作 start -->
+	    <div class="hzo-cooperation">
+	    	<div class="w1200">
+	    		<div class="coop-hd">
+	    			<h5><span>他们</span> 选择了HZO</h5>
+	    			<h6>这些优秀的平台选择了和HZO合作，打造高品质的产品视觉！</h6>
+	    		</div>
+	    		<div class="coop-customer"><img src="images/brandList.png" /></div>
+	    	</div>
+	    </div>
+	    <!-- hzo-cooperation合作 end -->
+	    
+	    <!-- hzo-ft底部 start -->
+	    <div class="hzo-ft">
+	    	<div class="w1200">
+	    		<div class="hzo-ft-top clearfix">
+	    			<div class="hzo-ft-menu l">
+	    				<dl>
+	    					<dt>快速导航</dt>
+	    					<dd><a href="">案例作品</a></dd>
+	    					<dd><a href="">服务项目</a></dd>
+	    					<dd><a href="">新闻动态</a></dd>
+	    					<dd><a href="">联系我们</a></dd>
+	    				</dl>
+	    				<dl>
+	    					<dt>服务支持</dt>
+	    					<dd><span>合作热线：</span><span>400-617-1006</span></dd>
+	    					<dd><span>合作QQ：</span><span>465153325</span></dd>
+	    					<dd><span>合作QQ：</span><span>665153328</span></dd>
+	    				</dl>
+	    				<dl>
+	    					<dt>友情链接</dt>
+	    					<dd><a href="">全球五金网</a></dd>
+	    					<dd><a href="">中国电动车网</a></dd>
+	    					<dd><a href="">五金采</a></dd>
+	    					<dd><a href="">五金眼</a></dd>
+	    				</dl>
+	    			</div>
+	    			<div class="hzo-ft-r r">
+	    				<p>24小时全国服务热线</p>
+	    				<p class="tel">400-617-1006</p>
+	    				<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2598599941&amp;site=qq&amp;menu=yes" class="kefu r"><i></i><span>在线客服</span></a>
+	    			</div>
+	    		</div>
+	    		
+	    		<div class="hzo-ft-bt clearfix">
+	    			<div class="clearfix hzo-ft-bt-b1">
+	    				<p class="l hzo-ft-b1-1">HZO 黄&郑&欧设计工作室</p>
+	    				<p class="l hzo-ft-b1-2">地址：浙江省杭州市拱墅区祥园路39号天堂E谷三号楼五楼</p>
+	    				<p class="r hzo-ft-b1-3"><span class="l label">关注我们：</span><i class="l i-weixin"></i><span class="l line">|</span><i class="l i-sina"></i><span class="l line">|</span><i class="l i-weibo"></i></p>
+	    			</div>
+	    			<p class="copyright">©2017 <a href="">www.hzohzo.com</a> All rights reserved.</p>
+	    		</div>
+	    	</div>
+	    </div>
+	    <!-- hzo-ft底部 end -->
 	</body>
 </html>
